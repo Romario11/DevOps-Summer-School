@@ -1,0 +1,5 @@
+// Make image
+docker build -t apache2-alpine .
+
+// Run image on container with localhost connection
+docker container run --network="host" -it -d --name apache apache2-alpine:latest 
